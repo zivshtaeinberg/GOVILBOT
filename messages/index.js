@@ -20,7 +20,7 @@ var bot = new builder.UniversalBot(connector);
 
 bot.dialog('/', [
     function (session) {
-        builder.send("ברוך הבא ל - GOVIL");       
+        session.send("ברוך הבא ל - GOVIL");       
         builder.Prompts.text(session, "מה תעודת הזהות שלך?");
     },
     function (session, results) {

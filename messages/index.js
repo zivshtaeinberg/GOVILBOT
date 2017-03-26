@@ -20,12 +20,13 @@ var bot = new builder.UniversalBot(connector);
 
 bot.dialog('/', [
     function (session) {
-        builder.Prompts.text(session, "ברוף הבא לGOVIL, מה תעודת הזהות שלך?");
+        builder.Prompts.text(session, "ברוך הבא ל - GOVIL");       
+        builder.Prompts.text(session, "מה תעודת הזהות שלך?");
     },
     function (session, results) {
         session.userData.id = results.response;
         session.send("שלום זיו שטיינברג"); 
-        builder.Prompts.choice(session, "מה תרצה לעשות?",["תשלום קנסות תעבורה","ספח חדש לתעודת זהות"]);
+        builder.Prompts.choice(session, "מה תרצה לעשות?",["תשלום קנסות תעבורה","ספח חדש לתעודת זהות","תעודת לידה לנולדים בישראל","הזמנת נסח טאבו מקוון","חידוש רישיון נהיגה"]);
     },
     function (session, results) {
         session.userData.language = results.response.entity;

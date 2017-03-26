@@ -29,7 +29,7 @@ bot.dialog('/', [
     },
     function (session, results) {
         session.userData.language = results.response.entity;
-        session.send("אין בעיה, מתחלים בתהליך" + results.response.entity);
+        session.send("אין בעיה,"+session.userData.id +" מתחלים בתהליך" + results.response.entity);
     }
 ]);
 
